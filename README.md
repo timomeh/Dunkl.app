@@ -1,5 +1,5 @@
 <p align="center">
-  <img alt="Dunkl.app" src="" width="450" height="480">
+  <img alt="Dunkl.app" src="/timomeh/Dunkl.app/blob/master/.github/logo.png?raw=true" width="450" height="480">
 </p>
 
 > Turn on dark mode in macOS after sunset
@@ -14,7 +14,7 @@ Under the hood, Dunkl.app just checks every 15 minutes if it should switch to da
 
 ## Installation
 
-1. [Download Dunkl.app]() and save it to your `/Applications/`, if you wish.
+1. [Download Dunkl.app](/timomeh/Dunkl.app/releases) and save it to your `/Applications/`, if you wish.
 2. Launch at system startup.
   1. Open "Users & Groups" located in System Preferences.
   2. Click on "Login Items".
