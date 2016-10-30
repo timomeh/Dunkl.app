@@ -1,5 +1,5 @@
 <p align="center">
-  <img alt="Dunkl.app" src="https://raw.githubusercontent.com/timomeh/Dunkl.app/master/.github/logo.png" width="450" height="480">
+  <img alt="Dunkl.app" src="https://raw.githubusercontent.com/timomeh/Dunkl.app/master/.github/logo.png" width="450">
 </p>
 
 > Turn on dark mode in macOS after sunset
