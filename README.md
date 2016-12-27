@@ -14,7 +14,7 @@ Under the hood, Dunkl.app just checks every 15 minutes if it should switch to da
 
 ## Installation
 
-1. [Download Dunkl.app](https://github.com/timomeh/Dunkl.app/releases/download/v1.1/Dunkl.app-v1.1.zip) and save it to your `/Applications/`, if you wish.
+1. [Download Dunkl.app](https://github.com/timomeh/Dunkl.app/releases/download/v1.1.1/Dunkl.app-v1.1.1.zip) and save it to your `/Applications/`, if you wish.
 2. Launch at system startup.
   1. Open "Users & Groups" located in System Preferences.
   2. Click on "Login Items".

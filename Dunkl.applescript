@@ -24,14 +24,12 @@ to checkTime()
 end checkTime
 
 to getSunrise(solunar)
-	set sunrise to extractBetween(solunar, "Sunrise: ", "
-")
+	set sunrise to extractBetween(solunar, "Sunrise: ", return)
 	return sunrise
 end getSunrise
 
 to getSunset(solunar)
-	set sunset to extractBetween(solunar, "Sunset: ", "
-")
+	set sunset to extractBetween(solunar, "Sunset: ", return)
 	return sunset
 end getSunset
 
