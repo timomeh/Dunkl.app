@@ -14,8 +14,8 @@ end quit
 
 
 to checkTime()
-	set solunarPath to POSIX path of (path to resource "./solunar")
-	set solunar to do shell script solunarPath & " -c berlin"
+	set solunarCallPath to POSIX path of (path to resource "./callsolunar")
+	set solunar to do shell script solunarCallPath
 	if (current date) is greater than date getSunrise(solunar) and (current date) is less than date getSunset(solunar) then
 		setDark(false)
 	else
