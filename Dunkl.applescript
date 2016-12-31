@@ -4,7 +4,7 @@ end run
 
 on idle
 	checkTime()
-	return 60 * 15
+	return 60 * 5
 end idle
 
 on quit
@@ -14,34 +14,14 @@ end quit
 
 
 to checkTime()
-	set solunarCallPath to POSIX path of (path to resource "./callsolunar")
-	set solunar to do shell script solunarCallPath
-	if (current date) is greater than date getSunrise(solunar) and (current date) is less than date getSunset(solunar) then
-		setDark(false)
-	else
+	set isItDarkScript to POSIX path of (path to resource "./is-it-dark")
+	try
+		do shell script isItDarkScript
 		setDark(true)
-	end if
+	on error
+		setDark(false)
+	end try
 end checkTime
-
-to getSunrise(solunar)
-	set sunrise to extractBetween(solunar, "Sunrise: ", return)
-	return sunrise
-end getSunrise
-
-to getSunset(solunar)
-	set sunset to extractBetween(solunar, "Sunset: ", return)
-	return sunset
-end getSunset
-
-to extractBetween(SearchText, startText, endText)
-	set tid to AppleScript's text item delimiters -- save them for later.
-	set AppleScript's text item delimiters to startText -- find the first one.
-	set endItems to text of text item -1 of SearchText -- everything after the first.
-	set AppleScript's text item delimiters to endText -- find the end one.
-	set beginningToEnd to text of text item 1 of endItems -- get the first part.
-	set AppleScript's text item delimiters to tid -- back to original values.
-	return beginningToEnd -- pass back the piece.
-end extractBetween
 
 to setDark(mode)
 	if mode is not equal to getDark() then

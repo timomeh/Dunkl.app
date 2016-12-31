@@ -8,31 +8,27 @@
 
 I use [f.lux](https://justgetflux.com), which has an option to switch to dark mode after sunset. Unfortunately, this option is gone in macOS Sierra. f.lux is working on this, see [this post](https://forum.justgetflux.com/topic/2975/macos-sierra-no-more-dark-mode/) in their forum.
 
-So I created this. It's nothing special, just a bit of AppleScript bundled in an Application. It comes bundled with [solunar](https://github.com/kevinboone/solunar_cmdline), which calculates the sunset and sunrise.
+So I created Dunkl.app. It's nothing special, just a bit of AppleScript bundled in an Application. It comes bundled with [solunar](https://github.com/kevinboone/solunar_cmdline), which calculates the sunset and sunrise for your current location.
 
-Under the hood, Dunkl.app just checks every 15 minutes if it should switch to dark mode. I'm aware that this is not the perfect way to do it. My intention is just to have an interim solution until f.lux provides this functionality under macOS Sierra.
+Under the hood, Dunkl.app just checks every 5 minutes if it should switch to dark mode. I'm aware that this is not the perfect way to do it. My intention is just to have an interim solution until f.lux provides this functionality under macOS Sierra.
 
 ## Installation
 
-1. [Download Dunkl.app](https://github.com/timomeh/Dunkl.app/releases/download/v1.1.1/Dunkl.app-v1.1.1.zip) and save it to your `/Applications/`, if you wish.
+1. [Download Dunkl.app](https://github.com/timomeh/Dunkl.app/releases/download/v1.2/Dunkl.app-v1.2.zip) and save it to your `/Applications/`, if you wish.
 2. Launch at system startup.
   1. Open "Users & Groups" located in System Preferences.
   2. Click on "Login Items".
   3. Add Dunkl.app.
 
-### Build yourself
-
-Don't do it.™ Just download the Application Bundle. You can open the Application Bundle with Apple's Script Editor if you want to make some glory AppleScript experiences. My way of bundling this mess takes a lot of screaming and weeping in the shower.
-
 ## Usage
 
-Dunkl.app runs completely in background. No dock icon, no menu bar icon. If you wish to close it, you have to open Activity Monitor, search for Dunkl.app and quit it.
+Dunkl.app runs 100% in background. No dock icon, no menu bar icon. If you wish to close it, you have to open Activity Monitor, search for Dunkl.app and quit it.
 
 ## Set Your Timezone
 
 Off the shelf, Dunkl.app's Timezone is set to Europe/Berlin. You can override this with the Environment Variable `DUNKL_CITY` **in your .bashrc file**.
 
-Execute this line in your Terminal. Replace `America/New_York` with the actual city of your Timezone.
+...or simply run this one-liner in your Terminal, don't forget to replace `America/New_York` with the actual city of your Timezone:
 
 `echo "export DUNKL_CITY=America/New_York" >> ~/.bashrc`
 
