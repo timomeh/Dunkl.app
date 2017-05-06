@@ -8,11 +8,13 @@
 
 I use [f.lux](https://justgetflux.com), which has an option to switch to dark mode after sunset. Unfortunately, this option is gone in macOS Sierra. f.lux is working on this, see [this post](https://forum.justgetflux.com/topic/2975/macos-sierra-no-more-dark-mode/) in their forum.
 
-**UPDATE: Dark Mode is back in f.lux Beta 39.6. You can download it [here](https://forum.justgetflux.com/topic/3466/f-lux-beta-39-6) or just wait for the update, it'll come back!**
-
 So I created Dunkl.app. It's nothing special, just a bit of AppleScript bundled in an Application. It comes bundled with [solunar](https://github.com/kevinboone/solunar_cmdline), which calculates the sunset and sunrise for your current location.
 
 Under the hood, Dunkl.app just checks every 5 minutes if it should switch to dark mode. I'm aware that this is not the perfect way to do it. My intention is just to have an interim solution until f.lux provides this functionality under macOS Sierra.
+
+## Notice
+
+**This App is not maintained anymore.** This was just an interim solution until Dark Mode is back in f.lux. Since f.lux 39.6, Dark Mode is back, so I don't want to maintain *this* approach anymore.
 
 ## Installation
 
